@@ -19,6 +19,14 @@ const seoSubKeywords = require('./routes/sub_keyword_generator')
 const topicalMap = require('./routes/topical_map')
 const blogPostIdeas = require("./routes/blog_post_ideas")
 const youtubeTags = require("./routes/youtube_tag_generator")
+const youtubeContentIdeas = require("./routes/youtube_content_ideas")
+const youtubeHashtags = require("./routes/youtube_hashtag")
+const instacaption = require("./routes/instagram_caption")
+const twitterCaption = require("./routes/twitter_caption")
+const tiktokCaption = require("./routes/tiktok_caption")
+const fivertags = require("./routes/fiver_tag")
+const midprompt = require("./routes/midjourney_prompt")
+const mcqbot = require("./routes/mcq_bot")
 
 app.use('/', seoMetaTitle);
 app.use('/', seoMetaDescription);
@@ -26,7 +34,14 @@ app.use('/',seoSubKeywords)
 app.use('/',topicalMap)
 app.use('/', blogPostIdeas)
 app.use ('/',youtubeTags)
-
+app.use ('/',youtubeContentIdeas)
+app.use ('/',youtubeHashtags)   
+app.use ('/',instacaption)
+app.use ('/',twitterCaption)
+app.use ('/',tiktokCaption)
+app.use ('/',fivertags)
+app.use ('/',midprompt)
+app.use ('/',mcqbot)
 
 app.post('/test', async (req, res) => {
     const  text = req.body;
